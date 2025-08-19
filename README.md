@@ -1,5 +1,5 @@
 - 👋 Hi, I’m @DannyWorku1234
-- 👀 I’m interested in Software Developing and Cyber Security
+- 👀 I’m interested in Software Devloper and Cyber Security
 - 🌱 I’m currently Computer Science Graguated and I am Ethical hacker and penetration testing 
 
 <!---
