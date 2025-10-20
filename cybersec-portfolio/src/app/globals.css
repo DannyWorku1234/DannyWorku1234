@@ -1,0 +1,58 @@
+@import "tailwindcss";
+@plugin "@tailwindcss/typography";
+@plugin "@tailwindcss/forms";
+
+:root {
+  --background: #0b1220; /* deep navy for cyber vibe */
+  --foreground: #e6edf3;
+  --muted: #0f172a;
+  --accent: #22d3ee; /* cyan */
+  --accent-2: #a78bfa; /* violet */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --font-sans: var(--font-geist-sans);
+  --font-mono: var(--font-geist-mono);
+}
+
+/* Explicit dark mode support via class strategy */
+.dark {
+  --background: #0a0f1a;
+  --foreground: #e5e7eb;
+  --muted: #0b1220;
+  --accent: #22d3ee;
+  --accent-2: #a78bfa;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Utilities */
+.container-px {
+  @apply px-6 sm:px-8 md:px-12 lg:px-20;
+}
+
+.cyber-gradient {
+  background: radial-gradient(1200px 600px at 10% -10%, color(display-p3 0 1 1 / 0.15), transparent 50%),
+              radial-gradient(1000px 400px at 100% 0%, color(display-p3 0.6 0.4 1 / 0.12), transparent 40%);
+}
+
+.card {
+  @apply rounded-xl border border-white/10 bg-white/5 backdrop-blur-md shadow-sm shadow-cyan-500/5 hover:shadow-cyan-400/10 transition;
+}
+
+.btn {
+  @apply inline-flex items-center gap-2 rounded-lg px-4 py-2 font-medium ring-1 ring-white/10 hover:ring-white/20 transition;
+}
+
+.btn-primary {
+  @apply bg-cyan-500/10 text-cyan-300 hover:bg-cyan-500/20;
+}
+
+.btn-secondary {
+  @apply bg-violet-500/10 text-violet-300 hover:bg-violet-500/20;
+}
